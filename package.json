@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.9.8",
+    "nodemon": "^3.1.1",
+    "prop-types": "^15.8.1",
+    "react-bootstrap": "^2.10.2",
+    "sequelize": "^6.37.3"
+  },
+  "name": "inventory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
