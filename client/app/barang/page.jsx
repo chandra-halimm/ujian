@@ -25,7 +25,6 @@ const Page = () => {
         namaBarang: "",
         stok: "",
       });
-      // Confirm success and redirect
       if (window.confirm("Berhasil menambahkan data")) {
         window.location.href = "/";
       }
