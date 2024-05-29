@@ -38,7 +38,7 @@ const createPembelian = async (req, res) => {
       });
     }
 
-    const newStock = dataBarang.stok + qty;
+    const newStock = dataBarang.stok + parseInt(qty);
 
     await BarangModels.update({ stok: newStock }, { where: { id: id_barang } });
 

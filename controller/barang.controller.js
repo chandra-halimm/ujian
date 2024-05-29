@@ -42,8 +42,28 @@ const createBarang = async (req, res) => {
   }
 };
 
-const deleteBarang = (req, res) => {
-  const { id } = req.params;
+const deleteBarang = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const barang = await BarangModels.findByPk(id);
+
+    if (!barang) {
+      return res.status(404).json({
+        msg: "Barang not found",
+      });
+    }
+
+    await barang.destroy();
+
+    return res.status(200).json({
+      msg: "Barang deleted successfully",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      error: error.message,
+    });
+  }
 };
 
-module.exports = { getBarang, createBarang };
+module.exports = { getBarang, createBarang, deleteBarang };
